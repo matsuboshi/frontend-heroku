@@ -27,7 +27,7 @@ export default function PageProducts() {
   }, []);
 
   const fetchProducts = async () => {
-    const url = 'http://localhost:3001/products';
+    const url = 'https://backend-heroku-teste.herokuapp.com/products';
     const data = await fetch(url);
     const items = await data.json();
     setProducts(items);

@@ -33,7 +33,7 @@ export default function PageContact() {
   }, [render]);
 
   const fetchItems = async () => {
-    const url = 'http://localhost:3001/messages';
+    const url = 'https://backend-heroku-teste.herokuapp.com/messages';
     const data = await fetch(url);
     const items = await data.json();
     setItems(items);
@@ -43,7 +43,7 @@ export default function PageContact() {
     event.preventDefault();
 
     const json = JSON.stringify(formData);
-    const url = 'http://localhost:3001/messages';
+    const url = 'https://backend-heroku-teste.herokuapp.com/messages';
     const options = {
       method: 'POST',
       headers: {
